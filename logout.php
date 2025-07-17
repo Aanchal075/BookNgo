@@ -10,6 +10,21 @@ session_destroy();
     <meta http-equiv="refresh" content="3;url=index.php">
     <title>Logging Out</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+  background: url('background3.webp');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:top;
+  background-position:scroll;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+</style>
 </head>
 <body>
 

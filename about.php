@@ -6,10 +6,12 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background: 
-        linear-gradient(rgba(30,30,30,0.7), rgba(30,30,30,0.7)),
-        url('images/your-image.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: url('background5.avif');
+      background-size:cover;
+      background-repeat:no-repeat;
+     background-attachment:top;
+    background-position:scroll; 
+ 
       min-height: 100vh;
       font-family: 'Segoe UI', Arial, sans-serif;
       color: #fff;
@@ -23,7 +25,11 @@
       border-radius: 12px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     }
-    h1, h2 {
+    h1{
+      text-align:center;
+      color:black;
+    }
+     h2 {
       text-align: center;
       color: #ffe066; /* Light yellow for headings */
     }
@@ -72,7 +78,7 @@
       display:inline-block;
       margin-top:24px;
       padding:12px 28px;
-      background:#28a745;
+      background: rgba(176, 107, 4, 0.92);
       color:#fff;
       border-radius:6px;
       text-decoration:none;

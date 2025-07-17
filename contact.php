@@ -26,18 +26,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background: url('background5.avif');
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-attachment:top;
+      background-position:scroll;
     }
 
     header {
-      background-color:rgb(178, 67, 186);
+      background-color:rgba(213, 137, 5, 0.85);
       color: white;
       padding: 20px;
       text-align: center;
     }
 
     nav {
-      background-color: rgba(107, 101, 109, 0.92);
+      background-color:  rgba(176, 107, 4, 0.92);
       text-align: center;
     }
 
@@ -49,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     nav a:hover {
-      background-color:rgba(107, 101, 109, 0.92);
+      background-color:rgba(135, 83, 5, 0.92);
     }
 
     .contact-container {
@@ -59,6 +63,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      
+  background:#9a939346;
+  box-shadow: 0 6px 12px rbga(0,0,0,0.5);
+  display:flex-block;
     }
 
     h2 {
@@ -78,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     form button {
       padding: 10px 15px;
-      background-color:rgb(152, 14, 136);
+      background-color:rgb(156, 86, 1);
       border: none;
       color: white;
       font-size: 16px;
@@ -87,16 +95,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     form button:hover {
-      background-color:rgb(141, 8, 144);
+      background-color:rgb(157, 86, 4);
     }
 
     footer {
-      background-color:rgb(191, 40, 176);
+      background-color:rgb(192, 111, 6);
       color: white;
       text-align: center;
       padding: 15px;
       margin-top: 30px;
     }
+    .form{
+  border: 1px solid #555;
+  background:#9a939346;
+  padding:5px;
+  margin:20px auto;
+  box-shadow: 0 6px 12px rbga(0,0,0,0.5);
+  display:flex-block;
+}
   </style>
 </head>
 <body>
@@ -113,8 +129,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <a href="logout.php">Logout</a>
     
   </nav>
-
-  <div class="contact-container">
+<div class="contact-container">
+  <div class="form">
     <h2>Get in Touch</h2>
     <form method="post" action="contact.php">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -124,6 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <button type="submit">Send Message</button>
     </form>
   </div>
+</div>
       <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "<p>Thank you for contacting us! We'll get back to you soon.</p>";

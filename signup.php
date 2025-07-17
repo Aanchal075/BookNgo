@@ -34,7 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 body {
-  background: linear-gradient(to right, #74ebd5,rgb(234, 170, 235));
+  background: url('background3.webp');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:top;
+  background-position:scroll;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
   display: flex;
@@ -58,12 +62,13 @@ body {
 
 h1 {
   margin-bottom: 20px;
-  color: #2d2d2d;
+  color:rgb(9, 7, 7);
 }
 
 h2 {
   margin-bottom: 20px;
-  color: #4a4a4a;
+  color:rgb(7, 6, 6);
+  text-align:center;
 }
 
 form input {
@@ -110,11 +115,20 @@ form button:hover {
 .signup-box a:hover {
   text-decoration: underline;
 }
+.form{
+  border: 1px solid #555;
+  background:#9a939346;
+  padding:5px;
+  margin:20px auto;
+  box-shadow: 0 6px 12px rbga(0,0,0,0.5);
+  display:flex-block;
+}
 
   </style>
 </head>
 <body>
     <h1>Welcome to BookNGo</h1><br>
+    <div class="form">
   <h2>Signup</h2><br>
   <form method="POST">
     <input type="text" name="username" placeholder="Username" required />
@@ -124,5 +138,6 @@ form button:hover {
   </form>
   <?php if (isset($msg)) echo "<p>$msg</p>"; ?>
   <p>Already have an account? <a href="index.php">Login here</a>.</p>
+</div>
 </body>
 </html>

@@ -16,15 +16,12 @@ session_start();
 
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: 
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: url('background5.avif');
       min-height: 100vh;
     }
 
     header {
-      background: rgba(145, 96, 235, 0.85);
+      background: rgba(213, 137, 5, 0.85);
       color: #fff;
       padding: 32px 0 18px 0;
       text-align: center;
@@ -34,7 +31,7 @@ session_start();
     }
 
     nav {
-      background:  rgba(107, 101, 109, 0.92);
+      background:  rgba(176, 107, 4, 0.92);
       text-align: center;
       border-radius: 8px;
       margin: 0 16px 24px 16px;
@@ -65,6 +62,7 @@ session_start();
       border-radius: 12px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.10);
       text-align:center;
+      background:#9a939346;
     }
 
     .hotel-listings {
@@ -110,7 +108,7 @@ session_start();
       margin-top: 12px;
       display: inline-block;
       padding: 10px 18px;
-      background:rgb(104, 6, 102);
+      background:rgb(215, 129, 9);
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
@@ -119,11 +117,11 @@ session_start();
     }
 
     .btn:hover {
-      background:rgb(106, 6, 109);
+      background:rgb(175, 85, 5);
     }
 
     footer {
-      background: rgba(128, 85, 123, 0.85);
+      background: rgba(195, 121, 9, 0.85);
       color: #fff;
       text-align: center;
       padding: 18px;

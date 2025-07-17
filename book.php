@@ -25,27 +25,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booking</title>
   <style>
-    body {
-  background: linear-gradient(to right, #74ebd5,rgb(233, 178, 239));
+  body {
+  background: url('background5.avif');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:top;
+  background-position:scroll;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.container {
-  text-align: center;
-}
-
-.signup-box {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 h1 {
@@ -55,15 +46,20 @@ h1 {
 form{
     width: 60%;
     margin-left: 20%;
+    border: 1px solid #555;
+    background:#9a939346;
+    padding: 10px;
+
 }
 
 form input {
-  width: 100%;
-  padding: 12px 15px;
-  margin: 10px 0;
+  width: 90%;
+  padding: 18px 15px;
+  margin: 10px 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
+  box-shadow: 0 6px 12px rbga(0,0,0,0.5);
 }
 
 form button {
@@ -77,13 +73,19 @@ form button {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+.form{
+  
+  
+  
+
+}
 
   </style>
 </head>
 <body>
   <h1>Welcome To BookNGo </h1>
   <h2>Book Your Stay </h2>
-  <section id="booking-form" class="form-section">
+  <div class="form">
    
     <form action="book.php" method="POST" onsubmit="return validateForm()">
     <lable>
@@ -104,10 +106,11 @@ form button {
       </lable>
       <lable>
       Enter Checkout Date
-      <input type="date" name="checkout" placeholder="Checkout date" required />
+      <input type="date" name="checkout" placeholder="Checkout date" required /><br><br>
       </lable>
-      <button type="submit">Confirm Booking</button><br>
+      <button type="submit">Confirm Booking</button><br><br><br>
     </form>
-  </section>
+</div>
+
 </body>
 </html>

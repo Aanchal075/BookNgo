@@ -38,111 +38,103 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* Full page center */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: linear-gradient(to right, #74ebd5,rgb(236, 82, 239));
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  body {
+      font-family: Arial, sans-serif;
+      background: url('background5.avif');
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-attachment:top;
+      background-position:scroll;
+    }
 
-/* Centered container */
-.feedback-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+    header {
+      background-color:rgba(213, 137, 5, 0.85);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-/* Feedback box */
-.feedback-box {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-}
+    nav {
+      background-color:  rgba(176, 107, 4, 0.92);
+      text-align: center;
+    }
 
-/* Header and nav styling */
-.feedback-box header h1 {
-  margin-bottom: 10px;
-  color: #2d2d2d;
-}
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      display: inline-block;
+      text-decoration: none;
+    }
 
-.feedback-box nav {
-  margin-bottom: 20px;
-}
+    nav a:hover {
+      background-color:rgba(109, 108, 101, 0.92);
+    }
 
-.feedback-box nav a {
-  text-decoration: none;
-  color: #007bff;
-  margin: 0 8px;
-  font-weight: bold;
-}
+    .feedback-box {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+       border: 1px solid #555;
+      background:#9a939346;
+      display:flex-block;
+    }
 
-.feedback-box nav a:hover {
-  text-decoration: underline;
-}
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
 
-/* Form elements */
-.feedback-box form input,
-.feedback-box form select,
-.feedback-box form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-}
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
 
-.feedback-box form textarea {
-  resize: none;
-  height: 100px;
-}
+    form button {
+      padding: 10px 15px;
+      background-color:rgba(176, 107, 4, 0.92);
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-.feedback-box form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+    form button:hover {
+      background-color:rgba(176, 107, 4, 0.92);
+      scale:1.2;
+    }
 
-.feedback-box form button:hover {
-  background-color: #0056b3;
-}
-
-/* Success message */
-.message {
-  margin-top: 15px;
-  font-weight: bold;
-  color: green;
-}
-
-/* Footer */
-.feedback-box footer {
-  margin-top: 20px;
-  font-size: 13px;
-  color: #777;
+    footer {
+      background-color:rgba(176, 107, 4, 0.92);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+    }
+    .form{
+  border: 1px solid #555;
+  background:#9a939346;
+  padding:5px;
+  margin:20px auto;
+  box-shadow: 0 6px 12px rbga(0,0,0,0.5);
+  display:flex-block;
 }
 
   </style>
 </head>
 <body>
-  <div class="feedback-container">
-    <div class="feedback-box">
+  
+    
       <header>
         <h1>Feedback</h1>
+      </header>
         <nav>
           <a href="home.php">Home</a>
           <a href="about.php">About</a>
@@ -150,8 +142,10 @@ body, html {
           <a href="feedback.php">Feedback</a>
           <a href="logout.php">Logout</a>
         </nav>
-      </header>
-
+      
+    <div class="feedback-box">
+      <div class="form">
+      <h2>Give your valuable feedback!!</h2>
       <form method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
@@ -164,16 +158,18 @@ body, html {
           <option value="2">⭐⭐ Fair</option>
           <option value="1">⭐ Poor</option>
         </select>
+        <br><br>
         <textarea name="message" placeholder="Your feedback..." required></textarea>
         <button type="submit">Submit Feedback</button>
       </form>
-
+      </div>
+</div>
       <?php if (isset($status)) echo "<p class='message'>$status</p>"; ?>
 
       <footer>
         <p>&copy; 2025 BookNGo. All rights reserved.</p>
       </footer>
-    </div>
-  </div>
+    
+
 </body>
 </html>
